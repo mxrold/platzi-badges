@@ -8,4 +8,11 @@ import './global.css';
 
 const container = document.getElementById('app');
 
-ReactDOM.render(<Badge />, container);
+ReactDOM.render(
+<Badge 
+    firstName="Martin" 
+    lastName="Roldan"
+    jobTitle="FullStack Developer"
+    twitter="martinrol"
+    avatarURL="https://www.gravatar.com/avatar?d=identicon"  
+/>, container);
