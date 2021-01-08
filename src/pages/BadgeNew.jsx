@@ -27,7 +27,7 @@ class BadgeNew extends Component {
                                 avatarURL="https://www.gravatar.com/avatar/?d=identicon"
                             />
                         </div>
-                        <div className="col-12 col-md-6 mt-4">
+                        <div className="col-12 col-md-6 my-4">
                             <BadgeForm />
                         </div>
                     </div>
