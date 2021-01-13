@@ -7,7 +7,6 @@ import imgError from '../images/404-error.svg';
 
 function NotFound() {
     return (
-        <>
         <div className="Not__Found">
             <div className="container">
                 <div className="row ">
@@ -22,7 +21,6 @@ function NotFound() {
                 </div>
             </div>
         </div>
-        </>
     );
 }
 
