@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import Badge from '../components/Badge';
-import Navbar from '../components/Navbar';
 import BadgeForm from '../components/BadgeForm';
 
 import './styles/BadgeNew.css';
@@ -31,8 +30,7 @@ class BadgeNew extends Component {
 
     render() {
         return (
-            <div>
-                <Navbar />
+            <>
                 <div className="BadgeNew__hero container-fluid py-4">
                     <img className="img-fluid" src={logoHero} alt="Logotype" />
                 </div>
@@ -57,7 +55,7 @@ class BadgeNew extends Component {
                         </div>
                     </div>
                 </div>
-            </div>
+            </>
         );
     };
 }
