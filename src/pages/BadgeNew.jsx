@@ -4,7 +4,7 @@ import Badge from '../components/Badge';
 import BadgeForm from '../components/BadgeForm';
 
 import './styles/BadgeNew.css';
-import logoHero from '../images/badge-header.svg';
+import logoHero from '../images/platziconf-logo.svg';
 
 class BadgeNew extends Component {
     state = { 
@@ -32,7 +32,7 @@ class BadgeNew extends Component {
         return (
             <>
                 <div className="BadgeNew__hero container-fluid py-4">
-                    <img className="img-fluid" src={logoHero} alt="Logotype" />
+                    <img className="BadgeNew__hero-img img-fluid" src={logoHero} alt="Logotype" />
                 </div>
 
                 <div className="container">
