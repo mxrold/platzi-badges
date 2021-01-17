@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import api from '../api';
 import Badge from '../components/Badge';
 import BadgeForm from '../components/BadgeForm';
 
@@ -28,6 +29,18 @@ class BadgeNew extends Component {
         });
     }
 
+    handleSubmit = async e => {
+        e.preventDefault();
+        this.setState({ loading: true, error:null })
+
+        try {
+            await api.badges.create(this.state.form);
+            this.setState({ loading: false });
+        } catch(error) {
+            this.setState({ loading: false, error:error });
+        }
+    }
+
     render() {
         return (
             <>
@@ -39,17 +52,18 @@ class BadgeNew extends Component {
                     <div className="row">
                         <div className="col-12 col-md-6 mt-4">
                             <Badge
-                                firstName={this.state.form.firstName}
-                                lastName ={this.state.form.lastName}
-                                twitter={this.state.form.twitter}
-                                jobTitle={this.state.form.jobTitle}
-                                email={this.state.form.email}
+                                firstName={this.state.form.firstName || 'First Name'}
+                                lastName ={this.state.form.lastName || 'Last Name'} 
+                                twitter={this.state.form.twitter || 'Twitter'}
+                                jobTitle={this.state.form.jobTitle || 'Job Title'}
+                                email={this.state.form.email || 'Email'}
                                 avatarURL="https://www.gravatar.com/avatar/?d=identicon"
                             />
                         </div>
                         <div className="col-12 col-md-6 my-4">
                             <BadgeForm 
                             onChange = {this.handleChange}
+                            onSubmit={this.handleSubmit}
                             formValues = {this.state.form}
                             />
                         </div>
