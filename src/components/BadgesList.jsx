@@ -23,26 +23,28 @@ class BadgesList extends Component {
             <ul className="list-unstyled Badges__list">
                 {items.map((badge) => {
                     return (
-                        <li key={badge.id} className="Badges__list-item">
-                            <div className="Badges__list-item--img">
-                                <Gravatar className="Badges__list-item--img-img" email={badge.email} alt={"Photo of " + badge.firstName}/>
-                            </div>
-                            <div className="Badges__list-item-user">
-                                <h2>{badge.firstName} {badge.lastName}</h2>
-                                <p>{badge.jobTitle}</p>
-                                <div className="Badges__list-item--user--media">
-                                    <figure>
-                                        <img src={logoTwitter} alt="Twitter logo"/>
-                                    </figure>
-                                    <p>@{badge.twitter}</p>    
+                        <Link className="text-reset text-decoration-none" to={`badges/${badge.id}/edit`}>
+                            <li key={badge.id} className="Badges__list-item">
+                                <div className="Badges__list-item--img">
+                                    <Gravatar className="Badges__list-item--img-img" email={badge.email} alt={"Photo of " + badge.firstName}/>
                                 </div>
-                            </div>
-                            <div className="Badges__list-item--colors">
-                                <span className="color1"></span>
-                                <span className="color2"></span>
-                                <span className="color3"></span>
-                            </div>
-                        </li>
+                                <div className="Badges__list-item-user">
+                                    <h2>{badge.firstName} {badge.lastName}</h2>
+                                    <p>{badge.jobTitle}</p>
+                                    <div className="Badges__list-item--user--media">
+                                        <figure>
+                                            <img src={logoTwitter} alt="Twitter logo"/>
+                                        </figure>
+                                        <p>@{badge.twitter}</p>    
+                                    </div>
+                                </div>
+                                <div className="Badges__list-item--colors">
+                                    <span className="color1"></span>
+                                    <span className="color2"></span>
+                                    <span className="color3"></span>
+                                </div>
+                            </li>
+                        </Link>
                     );
                 })}
             </ul>
