@@ -27,30 +27,30 @@ export default function BadgeDetails (props) {
             </div>
 
             <div className="container">
-                <div className="row my-4g">
-                <div className="col-12 col-md-6">
-                    <Badge
-                    firstName={badge.firstName}
-                    lastName={badge.lastName}
-                    email={badge.email}
-                    twitter={badge.twitter}
-                    jobTitle={badge.jobTitle}
-                    />
-                </div>
-                <div className="col-12 col-md-6">
-                    <h2>Actions</h2>
-                    <div>
-                    <div>
-                        <Link className="btn btn-primary mb-4" to={`/badges/${badge.id}/edit`}>
-                        Edit
-                        </Link>
+                <div className="row my-4">
+                    <div className="col-12 col-md-6">
+                        <Badge
+                        firstName={badge.firstName}
+                        lastName={badge.lastName}
+                        email={badge.email}
+                        twitter={badge.twitter}
+                        jobTitle={badge.jobTitle}
+                        />
                     </div>
+                    <div className="col-12 col-md-6">
+                        <h2>Actions</h2>
+                        <div className="BadgeDetails__buttons mb-4">
+                            <div>
+                                <Link className="btn btn-primary mb-2 BadgeDetails__buttons-link" to={`/badges/${badge.id}/edit`}>
+                                Edit
+                                </Link>
+                            </div>
 
-                    <div>
-                        <button className="btn btn-danger">Delete</button>
+                            <div>
+                                <button className="btn btn-danger">Delete</button>
+                            </div>
+                        </div>
                     </div>
-                    </div>
-                </div>
                 </div>
             </div>
         </>
