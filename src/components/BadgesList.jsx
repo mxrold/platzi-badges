@@ -24,7 +24,7 @@ class BadgesList extends Component {
                 {items.map((badge) => {
                     return (
                         <li key={badge.id} className="Badges__list-item">
-                                <Link className="text-reset text-decoration-none" to={`badges/${badge.id}/edit`}>
+                            <Link className="text-reset text-decoration-none" to={`badges/${badge.id}/edit`}>
                                 <div className="Badges__list-item--img">
                                     <Gravatar className="Badges__list-item--img-img" email={badge.email} alt={"Photo of " + badge.firstName}/>
                                 </div>
@@ -43,8 +43,8 @@ class BadgesList extends Component {
                                     <span className="color2"></span>
                                     <span className="color3"></span>
                                 </div>
-                        </Link>
-                            </li>
+                            </Link>
+                        </li>
                     );
                 })}
             </ul>

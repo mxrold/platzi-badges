@@ -19,7 +19,7 @@ class BadgeForm extends Component {
 
     render() {
         return (
-            <React.fragment>
+            <div>
                 <form onSubmit={this.props.onSubmit}>
                     <div className="form-group">
                         <label>First Name</label>
@@ -48,7 +48,7 @@ class BadgeForm extends Component {
                         <p className="text-danger">{this.props.error.message}</p>
                     )}
                 </form>
-            </React.fragment>
+            </div>
         );
     };
 }
