@@ -26,13 +26,13 @@ export default function BadgeDetails (props) {
             <div className="BadgeDetails__hero">
                 <div className="container">
                 <div className="row">
-                    <div className="col-12 col-md-6">
-                    <img src={confLogo} alt="Logo de la Conferencia" />
+                    <div className="col-12 col-md-6 d-flex align-items-center">
+                        <img className="mx-auto" src={confLogo} alt="Logo de la Conferencia" />
                     </div>
-                    <div className="col-12 col-md-6 BadgeDetails__hero-attendant-name">
-                    <h1>
-                        {badge.firstName} {badge.lastName}
-                    </h1>
+                    <div className="col-12 col-md-6 BadgeDetails__hero-attendant-name mt-3 text-center">
+                        <h1>
+                            {badge.firstName} {badge.lastName}
+                        </h1>
                     </div>
                 </div>
                 </div>
@@ -49,13 +49,13 @@ export default function BadgeDetails (props) {
                         jobTitle={badge.jobTitle}
                         />
                     </div>
-                    <div className="col-12 col-md-6">
+                    <div className="col-12 col-md-6 mt-4">
                         <h2>Actions</h2>
                         <div className="BadgeDetails__buttons mb-4">
                             <div>
                                 <button onClick={() => {
                                     setCount(count + 1);
-                                }} className="btn btn-primary mr-4">
+                                }} className="btn btn-primary mr-4 mb-4">
                                     Increase Count: {count}
                                 </button>
                                 <Link className="btn btn-primary mb-2 BadgeDetails__buttons-link" to={`/badges/${badge.id}/edit`}>

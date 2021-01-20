@@ -1,74 +1,19 @@
-.Badges__list {
-    width: 100%;
-    height: max-content;
-}
-
-.Badges__list-item {
-    position: relative;
+.BadgesList ul>li {
+    margin-bottom: 1rem;
+  }
+  
+  .BadgesListItem {
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.23);
+    border-radius: 5px;
     display: flex;
-    margin-bottom: 20px;
-    padding: 14px;
-    background-color: #ffffff;
-    box-shadow: 0px 0px 9px 2px #c3b0b0;
-    border-radius: 6px;
-}
+    padding: 1rem;
+  }
 
-.Badges__list-item--img {
-    width: 80px;
-    height: 80px;
-}
-
-.Badges__list-item--img-img  {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-}
-
-.Badges__list-item--user--media {
-    display: flex;
-}
-
-.Badges__list-item--user--media figure {
-    width: 25px;
-    height: 25px;
-}
-
-.Badges__list-item--user--media img {
-    width: 100%;
-    height: 100%;
-}
-
-.Badges__list-item--user--media p {
-    color: #3498db;
-}
-
-.Badges__list-item--colors {
-    width: 21px;
-}
-
-.color1,
-.color2, 
-.color3 {
-    position: absolute;
-    top: 0;
-    display: inline-block;
-    width: 7px;
-    height: 100%;
-}
-
-.color1 {
-    right: 14px;
-    background-color: #ffde19;
-}
-
-.color2 {
-    right: 7px;
-    background-color: #004aa4;
-}
-
-.color3 {
-    right: 0px;
-    background-color: #ff4119;
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
-}
+  .BadgesListItem__avatar {
+    width: 80px !important; 
+    height: 80px !important;
+    border-radius: 100%;
+    background: #a3a3a3;
+    margin-right: 0.5rem;
+  }
